@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Website</title>
+        <meta name="description" content="a website designed by jamie">
+        <link rel="stylesheet" href="main.css">
+    </head>
+        
+        <header>
+        <h1>Sample Website</h1>
+        <IMG class="left" SRC="left.png" onclick="plusSlides(-1)"> 
+        <IMG class="menu" SRC="menu.png" onclick="myFunction()">
+        <IMG class="right" SRC="right.png" onclick="plusSlides(1)">
+        </header>
+            
+            <ul class="nav">
+	<li class="active"><a href="#">Home<a/></li>
+	<li><a href="#">Services<a/></li>
+	<li><a href="#">About<a/></li>
+	<li><a href="#">Contact<a/></li>
+	</ul>
+	
+            
+            
+    <body>
+    
+    <h1 class="h1body">Learn More Below</h1>
+        
+    <div class="black">
+    <p>How can we use technology to benefit us</p>  
+    </div>
+        
+
+<div class="slideshow-container">
+    
+    <!-- Next/prev buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+  <div class="mySlides">
+      
+      <h2>Mobile Learning and apps</h2>
+      
+      <IMG class="image" SRC="mobile.png">
+      
+    <p>Learners expect experiences they can touch and tools
+which are accessible from anywhere. We use HTML5 to
+build responsive content which learners can navigate
+like the apps and websites they love. One experience on
+any device.</p>
+  </div>
+
+  <div class="mySlides">
+      
+      <h2>Animations and video</h2>
+      
+    <IMG class="image" SRC="video.jpg">
+      
+    <p>An eye-popping animation is a great way to open a course. It’s also a standalone asset to help you promote it. You can have a message from your CEO to open the training, video testimonials from some of your employees, interviews with your subject matter experts or dramatised scenarios using actors. You can film in a studio, on location or in virtual worlds (using green or blue screen). </p>
+  </div>
+
+  <div class="mySlides">
+      
+      <h2>Interaction and scenarios</h2>
+      
+       <IMG class="image" SRC="interaction.png">
+      
+    <p>What makes great classroom training great? Often it’s the instructor involving the audience, encouraging interaction – and making eye contact. We believe online training is no different. Our elearning solutions are fully interactive, using activities, quizzes and highly developed scenarios.  </p>
+  </div>
+    
+    <div class="mySlides">
+        
+    <h2>Gamification</h2>
+        
+        <IMG class="image" SRC="game.png">
+        
+    
+    <p>Game mechanics in learning motivate achievement by satisfying psychological needs. We build in performance indicators that measure how well learners doing as they answer questions, complete tasks or make decisions. This flags up weaker areas early on and spurs them on when they’re on a roll.  </p>
+  </div>
+    
+    <div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+  
+</div>
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+    
+    function myFunction(elmnt,clr) {
+  elmnt.style.color = clr;
+}
+    
+    function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+    
+   window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+            
+            
+            
+            
+    </body>
